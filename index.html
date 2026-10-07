@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Max Duffy | Photography</title>
+<meta name="description" content="Black and white photography by Max Duffy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4f0;--fg:#1a1a18;--mute:#77746d;--line:#dcd8d0;--card:#e7e3da;--accent:#9a6b3f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111110;--fg:#efece6;--mute:#8d8a83;--line:#2c2b28;--card:#1e1d1b;--accent:#c89560}}
+:root[data-theme="dark"]{--bg:#111110;--fg:#efece6;--mute:#8d8a83;--line:#2c2b28;--card:#1e1d1b;--accent:#c89560}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 Inter,system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font:500 22px "Cormorant Garamond",Georgia,serif;letter-spacing:.04em;color:var(--fg);text-decoration:none}
+nav a{margin-left:22px;font-size:13px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
+nav a:hover{color:var(--fg)}
+.hero{padding:12vh 5vw 8vh;max-width:1100px}
+.hero h1{font:400 clamp(40px,7vw,84px)/1.05 "Cormorant Garamond",Georgia,serif;margin:0 0 20px}
+.hero p{max-width:520px;color:var(--mute);margin:0 0 28px}
+.btn{display:inline-block;padding:12px 26px;border:1px solid var(--fg);color:var(--fg);text-decoration:none;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.btn:hover{background:var(--fg);color:var(--bg)}
+section{padding:6vh 5vw}
+h2{font:400 34px "Cormorant Garamond",Georgia,serif;margin:0 0 20px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.filters button{background:none;border:1px solid var(--line);color:var(--mute);padding:7px 16px;font:inherit;font-size:13px;cursor:pointer;border-radius:99px}
+.filters button.on{border-color:var(--fg);color:var(--fg)}
+.grid{columns:3 280px;column-gap:14px}
+.tile{position:relative;break-inside:avoid;margin:0 0 14px;background:var(--card);cursor:zoom-in;overflow:hidden}
+.tile .ph{display:flex;align-items:flex-end;padding:14px;font-size:12px;letter-spacing:.1em;color:var(--mute);background:linear-gradient(135deg,var(--card),var(--line))}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tile:hover img{transform:scale(1.03)}
+.tile.hide{display:none}
+.empty{display:none;color:var(--mute);padding:40px 0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:5vw;max-width:1100px}
+.about p{color:var(--mute);margin:0 0 14px}
+@media(max-width:700px){.about{grid-template-columns:1fr}nav a{margin-left:14px}}
+.contact{border-top:1px solid var(--line)}
+.contact a.mail{font:400 clamp(26px,5vw,48px) "Cormorant Garamond",Georgia,serif;color:var(--accent);text-decoration:none}
+footer{padding:30px 5vw;color:var(--mute);font-size:13px;border-top:1px solid var(--line)}
+.lb{position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:4vw}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:88vh;object-fit:contain}
+.lb .cap{position:absolute;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#ccc;font-size:13px}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:14px}
+.lb .x{top:env(safe-area-inset-top,0px);right:10px}.lb .p{left:6px}.lb .n{right:6px}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">Max Duffy</a>
+  <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="hero" id="top">
+  <h1>Black and white photography of quiet rooms and strange light.</h1>
+  <p>Empty offices, stairwells, winter woods and figures half-lost in them. Shot in Utah, available for commissions.</p>
+  <a class="btn" href="#work">View portfolio</a>
+</div>
+
+<section id="work">
+  <h2>Work</h2>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty">Coming soon.</p>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about">
+    <p>Hi, I'm Max. I'm Max Duffy, a photographer working in black and white. My work looks at places people pass through and rarely notice. Replace this with your own story.</p>
+    <p>Available for commercial and editorial commissions. Add your services, licensing terms and notable clients here.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let's work together</h2>
+  <a class="mail" href="mailto:hello@example.com">hello@example.com</a>
+</section>
+
+<footer>&copy; <span id="yr"></span> Max Duffy. All images copyrighted; no use without license.</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" id="lx" aria-label="Close">&times;</button>
+  <button class="p" id="lp" aria-label="Previous">&#8249;</button>
+  <img id="li" alt="">
+  <button class="n" id="ln" aria-label="Next">&#8250;</button>
+  <div class="cap" id="lc"></div>
+</div>
+
+<script>
+/* EDIT HERE: one entry per photo (s=file path, c=category, t=title, r=width/height) */
+const PHOTOS=[{"s": "images/liminal1.jpg", "c":"Black & White", "t": "Liminal 1", "r": 1.5}, {"s": "images/liminal2.jpg", "c":"Black & White", "t": "Liminal 2", "r": 1.5}, {"s": "images/liminal3.jpg", "c":"Black & White", "t": "Liminal 3", "r": 0.667}, {"s": "images/liminal4.jpg", "c":"Black & White", "t": "Liminal 4", "r": 1.5}, {"s": "images/liminal5.jpg", "c":"Black & White", "t": "Liminal 5", "r": 1.5}, {"s": "images/liminal7.jpg", "c":"Black & White", "t": "Liminal 7", "r": 1.25}, {"s": "images/drew-pt2.jpg", "c":"Black & White", "t": "Drew, Pt. 2", "r": 1.657}, {"s": "images/handbag.jpg", "c":"Black & White", "t": "Handbag", "r": 0.651}, {"s": "images/head-bang.jpg", "c":"Black & White", "t": "Head Bang", "r": 1.225}, {"s": "images/as-above-so-below.jpg", "c":"Black & White", "t": "As Above, So Below", "r": 0.667}, {"s": "images/babylamp.jpg", "c":"Black & White", "t": "Baby Lamp", "r": 1.425}, {"s": "images/bamboob.jpg", "c":"Black & White", "t": "Bamboo", "r": 1.5}, {"s": "images/flower-buds.jpg", "c":"Black & White", "t": "Flower Buds", "r": 1.496}, {"s": "images/landscape.jpg", "c":"Black & White", "t": "Landscape", "r": 1.455}];
+const grid=document.getElementById("grid"),fl=document.getElementById("filters");
+const em=document.getElementById("empty");
+const cats=["Black & White","Real Estate","Double Exposures"]; /* EDIT HERE: filter button names */
+let cur="Black & White",vis=[],idx=0;
+PHOTOS.forEach((p,i)=>{
+  const d=document.createElement("figure");d.className="tile";d.dataset.c=p.c;
+  d.innerHTML='<div class="ph" style="aspect-ratio:'+p.r+'">'+p.t+'</div><img loading="lazy" alt="'+p.t+'" src="'+p.s+'">';
+  d.querySelector("img").onerror=function(){this.style.display="none";this.dataset.bad=1};
+  d.onclick=()=>open(p);
+  grid.appendChild(d);
+});
+cats.forEach(c=>{
+  const b=document.createElement("button");b.textContent=c;if(c===cur)b.className="on";
+  b.onclick=()=>{cur=c;[...fl.children].forEach(x=>x.className=x===b?"on":"");
+    [...grid.children].forEach(t=>t.classList.toggle("hide",t.dataset.c!==c));
+    em.style.display=PHOTOS.some(p=>p.c===c)?"none":"block"};
+  fl.appendChild(b);
+});
+const lb=document.getElementById("lb"),li=document.getElementById("li"),lc=document.getElementById("lc");
+function list(){return PHOTOS.filter(p=>cur==="All"||p.c===cur)}
+function show(){const p=vis[idx];li.src=p.s;li.alt=p.t;lc.textContent=p.t+" · "+p.c+" · "+(idx+1)+"/"+vis.length}
+function open(p){vis=list();idx=vis.indexOf(p);show();lb.classList.add("open")}
+function step(n){idx=(idx+n+vis.length)%vis.length;show()}
+document.getElementById("lx").onclick=()=>lb.classList.remove("open");
+document.getElementById("lp").onclick=()=>step(-1);
+document.getElementById("ln").onclick=()=>step(1);
+lb.onclick=e=>{if(e.target===lb)lb.classList.remove("open")};
+addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;
+  if(e.key==="Escape")lb.classList.remove("open");if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
