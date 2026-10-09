@@ -99,6 +99,8 @@ cats.forEach(c=>{
     em.style.display=PHOTOS.some(p=>p.c===c)?"none":"block"};
   fl.appendChild(b);
 });
+[...grid.children].forEach(t=>t.classList.toggle("hide",t.dataset.c!==cur));
+em.style.display=PHOTOS.some(p=>p.c===cur)?"none":"block";
 const lb=document.getElementById("lb"),li=document.getElementById("li"),lc=document.getElementById("lc");
 function list(){return PHOTOS.filter(p=>cur==="All"||p.c===cur)}
 function show(){const p=vis[idx];li.src=p.s;li.alt=p.t;lc.textContent=p.t+" · "+p.c+" · "+(idx+1)+"/"+vis.length}
