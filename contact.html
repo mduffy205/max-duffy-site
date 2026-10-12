@@ -80,11 +80,12 @@ nav a.cur{color:var(--fg)}
 <p>Available for real estate and commercial photography. Prints are for sale of my personal work too. Send me a message and let's connect.</p>
 <a class="mail" href="mailto:Mboss25@icloud.com">Mboss25@icloud.com</a>
 <h2>Send a message</h2>
-<form id="cf" novalidate>
+<form id="cf" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+<input type="hidden" name="form-name" value="contact">
 <label for="n">Your name</label><input id="n" name="name" required autocomplete="name">
 <label for="e">Your email</label><input id="e" name="email" type="email" required autocomplete="email">
 <label for="m">Details</label><textarea id="m" name="message" required></textarea>
-<div class="hp" aria-hidden="true"><label>Leave this empty<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<div class="hp" aria-hidden="true"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off"></label></div>
 <button class="send" type="submit">Send message</button>
 <p class="fmsg" id="fm" role="status"></p>
 </form>
@@ -94,21 +95,16 @@ nav a.cur{color:var(--fg)}
 <dt>Phone</dt><dd><a href="tel:+13473802966">(347)-380-2966</a></dd>
 </dl>
 <script>
-/* EDIT: paste your Formspree form address here (see instructions). Until then, the form opens an email instead. */
-const FORM_ENDPOINT="https://formspree.io/f/YOUR_FORM_ID";
 const MY_EMAIL="Mboss25@icloud.com";
 const f=document.getElementById("cf"),fm=document.getElementById("fm");
 f.addEventListener("submit",async e=>{
   e.preventDefault();
   const d=Object.fromEntries(new FormData(f));
   if(!d.name||!d.email||!d.message||!/^\S+@\S+\.\S+$/.test(d.email)){fm.textContent="Please fill in your name, a valid email, and a message.";return}
-  if(d._gotcha)return;
-  if(FORM_ENDPOINT.includes("YOUR_FORM_ID")){
-    location.href="mailto:"+MY_EMAIL+"?subject="+encodeURIComponent("Inquiry from "+d.name)+"&body="+encodeURIComponent(d.message+"\n\n"+d.name+"\n"+d.email);
-    return}
+  if(d["bot-field"])return;
   const b=f.querySelector(".send");b.disabled=true;fm.textContent="Sending...";
   try{
-    const r=await fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(d)});
+    const r=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:new URLSearchParams(new FormData(f)).toString()});
     if(!r.ok)throw 0;
     f.reset();fm.textContent="Thank you. Your message was sent and I'll be in touch soon.";
   }catch(x){fm.textContent="Something went wrong. Please email me directly at "+MY_EMAIL+".";}
