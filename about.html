@@ -55,7 +55,21 @@ nav a.cur{color:var(--fg)}
 .page a.mail{display:inline-block;margin:10px 0 28px;font:400 clamp(26px,5vw,46px) "Cormorant Garamond",Georgia,serif;color:var(--accent);text-decoration:none;word-break:break-all}
 .page dl{margin:36px 0 0;border-top:1px solid var(--line)}
 .page dt{font-size:13px;color:var(--mute);padding-top:14px}
+.page dd a{color:var(--fg);text-decoration:none}
 .page dd{margin:2px 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.portrait{display:flex;align-items:center;justify-content:center;width:240px;max-width:70%;aspect-ratio:4/5;margin:0 auto 34px;background:var(--card);border:1px solid var(--line);color:var(--mute);font-size:13px;object-fit:cover}
+.page .bio{max-width:620px;margin:0 auto;text-align:left}
+.page form{max-width:520px;margin:34px auto 0;text-align:left}
+.page h2{text-align:center;margin:44px 0 0}
+.page label{display:block;font-size:13px;color:var(--mute);margin:18px 0 6px}
+.page input,.page select,.page textarea{width:100%;padding:12px 14px;font:inherit;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:0;appearance:none}
+.page input:focus,.page select:focus,.page textarea:focus{outline:none;border-color:var(--fg)}
+.page textarea{min-height:140px;resize:vertical}
+.page .send{margin-top:24px;cursor:pointer;background:none;font:inherit;font-size:13px;letter-spacing:.12em;padding:13px 28px;border:1px solid var(--fg);color:var(--fg)}
+.page .send:hover{background:var(--fg);color:var(--bg)}
+.page .send:disabled{opacity:.5;cursor:default}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.page .fmsg{margin:18px 0 0;min-height:1.6em;text-align:center;color:var(--fg)}
 </style>
 </head>
 <body>
@@ -65,14 +79,14 @@ nav a.cur{color:var(--fg)}
 </header>
 <main class="page">
 <h1>About</h1>
-<!-- EDIT: replace the text below with your own story -->
-<p>I'm Max Duffy, a photographer working in black and white. My work looks at places people pass through and rarely notice: empty offices, stairwells, winter woods, and figures half-lost in them.</p>
-<p>Add a few sentences here about how you got started, how you work, and the kinds of clients you enjoy working with.</p>
+<div class="bio">
+<p>Hi, I'm Max Duffy, a fine art &amp; real estate photographer based in Salt Lake City, UT. My work ranges from architectural and interior imagery to black &amp; white fine art and experimental double exposures, blending technical precision with a distinctive artistic vision.</p>
+<p>My approach combines a thoughtful eye for composition with an appreciation for light, texture, and atmosphere. Whether capturing the character of a space, the details of a property, or creating fine art through monochromatic imagery and experimental double exposures, I aim to produce photographs that feel intentional, distinctive, and lasting.</p>
+<p>I believe every space and subject has its own story to tell. My goal is to bring that story into focus through imagery that balances technical precision with creative vision. From real estate photography designed to showcase a property's unique qualities to fine art work that invites a second look, I strive to deliver images that are both visually compelling and tailored to each client's needs.</p>
+</div>
 <dl>
-<!-- EDIT: change these details -->
-<dt>Services</dt><dd>Commercial and editorial photography</dd>
-<dt>Based in</dt><dd>Utah, available for travel</dd>
-<dt>Clients</dt><dd>Add notable clients here</dd>
+<dt>Services</dt><dd>Real estate and architectural photography, fine art prints</dd>
+<dt>Based in</dt><dd>Salt Lake City, UT</dd>
 </dl>
 </main>
 <footer>&copy; <span id="yr"></span> Max Duffy. All images copyrighted; no use without license.</footer>
