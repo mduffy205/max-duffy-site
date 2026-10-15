@@ -7,7 +7,7 @@
 <meta name="description" content="Max Duffy is a fine art and real estate photographer based in Salt Lake City, UT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--bg:#f5f2eb;--fg:#000;--mute:#3f3d39;--line:#d6d1c6;--card:#e6e1d6;--accent:#000;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -15,7 +15,8 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 Inter,system-ui,sans-serif}
 header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.logo{font:500 22px "Cormorant Garamond",Georgia,serif;letter-spacing:.04em;color:var(--fg);text-decoration:none}
+.logo{font:700 29px "Cormorant Garamond",Georgia,serif;letter-spacing:.03em;color:var(--fg);text-decoration:none}
+@media(max-width:520px){.logo{font-size:24px}nav a{margin-left:14px!important}}
 nav a{margin-left:22px;font-size:13px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
 nav a:hover,nav a.cur{color:var(--fg)}
 .hero{padding:12vh 5vw 8vh;max-width:1100px}
@@ -105,13 +106,13 @@ footer{padding:30px 5vw;color:var(--mute);font-size:13px;border-top:1px solid va
 <section class="featured">
 <h2>Explore the work</h2>
 <div class="grid3">
-<a class="tile3" href="work.html#real-estate"><div class="ph3"><img src="images/re-01.webp" alt="" loading="lazy"></div><h3>Real Estate</h3><p>Presenting spaces with clarity and character.</p></a>
 <a class="tile3" href="work.html#black-and-white"><div class="ph3"><img src="images/as-above-so-below.webp" alt="" loading="lazy"></div><h3>Black &amp; White</h3><p>Quiet spaces and strange memories.</p></a>
 <a class="tile3" href="work.html#double-exposures"><div class="ph3"><img src="images/am-i-supposed-to-be-here.webp" alt="" loading="lazy"></div><h3>Double Exposures</h3><p>Two places burned into one image.</p></a>
+<a class="tile3" href="work.html#real-estate"><div class="ph3"><img src="images/re-01.webp" alt="" loading="lazy"></div><h3>Real Estate</h3><p>Presenting spaces with clarity and character.</p></a>
 </div>
 </section>
 <section class="closing">
-<p>Available for real estate and commercial photography. Prints are for sale of my personal work too. Send me a message and let's connect.</p>
+<p>Available for real estate and commercial photography. Prints are available for sale. Send a message and let's connect.</p>
 <a class="btn" href="contact.html">Get in touch</a>
 <a class="mail" href="mailto:mduffy.photo@gmail.com">mduffy.photo@gmail.com</a>
 </section>
