@@ -99,7 +99,7 @@ function setHero(c,instant){const t=HERO[c];if(!t)return;
   setTimeout(()=>{hh.textContent=t[0];hp.textContent=t[1];hh.classList.remove("fade");hp.classList.remove("fade")},250)}
 const cats=["Black & White","Double Exposures","Real Estate"]; /* EDIT HERE: filter button names */
 const HASH={"#real-estate":"Real Estate","#black-and-white":"Black & White","#double-exposures":"Double Exposures"};
-let cur=HASH[location.hash]||"Real Estate",vis=[],idx=0;
+let cur=HASH[location.hash]||"Black & White",vis=[],idx=0;
 PHOTOS.forEach((p,i)=>{
   const d=document.createElement("figure");d.className="tile";d.dataset.c=p.c;
   d.innerHTML='<div class="ph" style="aspect-ratio:'+p.r+'">'+p.t+'</div><img loading="lazy" alt="'+(p.t||p.c)+'" src="'+p.s+'">';
