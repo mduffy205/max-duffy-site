@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Max Duffy | Photography</title>
-<meta name="description" content="Black and white photography by Max Duffy.">
+<title>Max Duffy | Fine Art & Real Estate Photography</title>
+<meta name="description" content="Max Duffy is a fine art and real estate photographer based in Salt Lake City, UT.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -49,84 +49,85 @@ footer{padding:30px 5vw;color:var(--mute);font-size:13px;border-top:1px solid va
 .lb .cap{position:absolute;bottom:calc(16px + env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#ccc;font-size:13px}
 .lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:14px}
 .lb .x{top:env(safe-area-inset-top,0px);right:10px}.lb .p{left:6px}.lb .n{right:6px}
+
+.show{position:relative;height:min(78vh,800px);margin:0;overflow:hidden}
+.slide{position:absolute;inset:0 0 46px 0;opacity:0;transition:opacity .9s ease;pointer-events:none}
+.slide.on{opacity:1;z-index:1;pointer-events:auto}
+.slide a{display:flex;width:100%;height:100%;align-items:center;justify-content:center}
+.slide img{max-width:90%;max-height:96%;width:auto;height:auto;display:block}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:none;border:0;color:var(--fg);font-size:44px;line-height:1;padding:12px 18px;cursor:pointer;opacity:.55}
+.arrow:hover{opacity:1}.prev{left:1vw}.next{right:1vw}
+.dots{position:absolute;bottom:18px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:3}
+.dots button{width:8px;height:8px;border-radius:50%;border:1px solid var(--fg);background:none;padding:0;cursor:pointer}
+.dots button.on{background:var(--fg)}
+.intro{padding:7vh 5vw 4vh;max-width:900px;margin:0 auto;text-align:center}
+.intro p{font:400 clamp(24px,3.6vw,40px)/1.2 "Cormorant Garamond",Georgia,serif;margin:0}
+.featured{padding:5vh 5vw 8vh}
+.featured h2{font:400 15px Inter,system-ui,sans-serif;letter-spacing:.12em;color:var(--mute);margin:0 0 18px;text-align:center}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile3{text-decoration:none;color:var(--fg);display:block}
+.ph3{aspect-ratio:4/5;overflow:hidden;background:var(--card)}
+.ph3 img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.tile3:hover .ph3 img{transform:scale(1.03)}
+.tile3 h3{font:400 clamp(24px,2.6vw,34px) "Cormorant Garamond",Georgia,serif;margin:14px 0 2px}
+.tile3 p{margin:0;color:var(--mute);font-size:14px}
+.closing{padding:4vh 5vw 14vh;max-width:760px;margin:0 auto;text-align:center}
+.closing p{color:var(--mute);margin:0 0 26px}
+.closing .mail{display:block;margin-top:22px;font:400 clamp(22px,3.6vw,34px) "Cormorant Garamond",Georgia,serif;color:var(--fg);text-decoration:none}
+@media(max-width:700px){.show{height:62vh}.grid3{grid-template-columns:1fr}.arrow{font-size:34px;padding:8px 10px}}
 </style>
 </head>
 <body>
 <header>
-  <a class="logo" href="#top">Max Duffy</a>
-  <nav><a href="#work" class="cur">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  <a class="logo" href="index.html">Max Duffy</a>
+  <nav><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 </header>
-
-<div class="hero" id="top">
-  <h1 id="hh">Black and white photography of quiet spaces and strange memories.</h1>
-  <p id="hp">The pause between where you were and where you’re going, held still.</p>
-  <a class="btn" href="#work">View portfolio</a>
-</div>
-
-<section id="work">
-  <h2>Work</h2>
-  <div class="filters" id="filters"></div>
-  <div class="grid" id="grid"></div>
-  <p class="empty" id="empty">Coming soon.</p>
+<main>
+<section class="show" id="show" aria-label="Photograph slideshow">
+<div class="slide on"><a href="work.html#double-exposures"><img src="images/am-i-supposed-to-be-here.webp" width="1600" height="1060" alt="Double exposure photograph"></a></div>
+<div class="slide"><a href="work.html#real-estate"><img src="images/re-01.webp" width="1800" height="1200" alt="Real estate photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#black-and-white"><img src="images/liminal5.webp" width="1600" height="1067" alt="Black and white photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#double-exposures"><img src="images/fenced-in.webp" width="1600" height="1061" alt="Double exposure photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#real-estate"><img src="images/re-16.webp" width="1800" height="1200" alt="Real estate photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#black-and-white"><img src="images/drew-pt2.webp" width="1600" height="965" alt="Black and white photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#real-estate"><img src="images/re-06.webp" width="1800" height="1217" alt="Real estate photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#double-exposures"><img src="images/sail.webp" width="1600" height="1076" alt="Double exposure photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#black-and-white"><img src="images/as-above-so-below.webp" width="1068" height="1600" alt="Black and white photograph" loading="lazy"></a></div>
+<div class="slide"><a href="work.html#black-and-white"><img src="images/landscape.webp" width="1600" height="1100" alt="Black and white photograph" loading="lazy"></a></div>
+<button class="arrow prev" id="pv" aria-label="Previous photo">&#8249;</button>
+<button class="arrow next" id="nx" aria-label="Next photo">&#8250;</button>
+<div class="dots" id="dots"></div>
 </section>
-
-<footer>&copy; <span id="yr"></span> Max Duffy. All images copyrighted; no use without license.</footer>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true">
-  <button class="x" id="lx" aria-label="Close">&times;</button>
-  <button class="p" id="lp" aria-label="Previous">&#8249;</button>
-  <img id="li" alt="">
-  <button class="n" id="ln" aria-label="Next">&#8250;</button>
-  <div class="cap" id="lc"></div>
+<section class="intro">
+<!-- EDIT: the sentence under the slideshow -->
+<p>Max Duffy is a fine art and real estate photographer based in Salt Lake City, UT.</p>
+</section>
+<section class="featured">
+<h2>Explore the work</h2>
+<div class="grid3">
+<a class="tile3" href="work.html#real-estate"><div class="ph3"><img src="images/re-01.webp" alt="" loading="lazy"></div><h3>Real Estate</h3><p>Presenting spaces with clarity and character.</p></a>
+<a class="tile3" href="work.html#black-and-white"><div class="ph3"><img src="images/as-above-so-below.webp" alt="" loading="lazy"></div><h3>Black &amp; White</h3><p>Quiet spaces and strange memories.</p></a>
+<a class="tile3" href="work.html#double-exposures"><div class="ph3"><img src="images/am-i-supposed-to-be-here.webp" alt="" loading="lazy"></div><h3>Double Exposures</h3><p>Two places burned into one image.</p></a>
 </div>
-
+</section>
+<section class="closing">
+<p>Available for real estate and commercial photography. Prints are for sale of my personal work too. Send me a message and let's connect.</p>
+<a class="btn" href="contact.html">Get in touch</a>
+<a class="mail" href="mailto:mduffy.photo@gmail.com">mduffy.photo@gmail.com</a>
+</section>
+</main>
+<footer>&copy; <span id="yr"></span> Max Duffy. All images copyrighted; no use without license.</footer>
 <script>
-/* EDIT HERE: one entry per photo (s=file path, c=category, t=title, r=width/height) */
-const PHOTOS=[{"s": "images/re-01.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-17.webp", "c": "Real Estate", "t": "", "r": 0.667}, {"s": "images/re-02.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-03.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-04.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-05.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-06.webp", "c": "Real Estate", "t": "", "r": 1.479}, {"s": "images/re-08.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-12.webp", "c": "Real Estate", "t": "", "r": 1.374}, {"s": "images/re-13.webp", "c": "Real Estate", "t": "", "r": 1.17}, {"s": "images/re-14.webp", "c": "Real Estate", "t": "", "r": 0.62}, {"s": "images/re-15.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-16.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/re-11.webp", "c": "Real Estate", "t": "", "r": 1.5}, {"s": "images/liminal1.webp", "c": "Black & White", "t": "Liminal 1", "r": 1.5}, {"s": "images/liminal2.webp", "c": "Black & White", "t": "Liminal 2", "r": 1.5}, {"s": "images/liminal3.webp", "c": "Black & White", "t": "Liminal 3", "r": 0.667}, {"s": "images/liminal4.webp", "c": "Black & White", "t": "Liminal 4", "r": 1.5}, {"s": "images/liminal5.webp", "c": "Black & White", "t": "Liminal 5", "r": 1.5}, {"s": "images/liminal7.webp", "c": "Black & White", "t": "Liminal 7", "r": 1.25}, {"s": "images/drew-pt2.webp", "c": "Black & White", "t": "Drew, Pt. 2", "r": 1.657}, {"s": "images/handbag.webp", "c": "Black & White", "t": "Handbag", "r": 0.651}, {"s": "images/head-bang.webp", "c": "Black & White", "t": "Head Bang", "r": 1.225}, {"s": "images/as-above-so-below.webp", "c": "Black & White", "t": "As Above, So Below", "r": 0.667}, {"s": "images/babylamp.webp", "c": "Black & White", "t": "Baby Lamp", "r": 1.425}, {"s": "images/bamboob.webp", "c": "Black & White", "t": "Bamboo", "r": 1.5}, {"s": "images/flower-buds.webp", "c": "Black & White", "t": "Flower Buds", "r": 1.496}, {"s": "images/landscape.webp", "c": "Black & White", "t": "Landscape", "r": 1.455}, {"s": "images/am-i-supposed-to-be-here.webp", "c": "Double Exposures", "t": "Am I Supposed To Be Here?", "r": 1.509}, {"s": "images/big-brother.webp", "c": "Double Exposures", "t": "Big Brother", "r": 1.509}, {"s": "images/drive-through.webp", "c": "Double Exposures", "t": "Drive Through", "r": 1.456}, {"s": "images/fenced-in.webp", "c": "Double Exposures", "t": "Fenced In", "r": 1.508}, {"s": "images/furry-fence.webp", "c": "Double Exposures", "t": "Furry Fence", "r": 0.744}, {"s": "images/graveyard.webp", "c": "Double Exposures", "t": "Graveyard", "r": 0.744}, {"s": "images/judge.webp", "c": "Double Exposures", "t": "Judge", "r": 0.778}, {"s": "images/lines-everywhere.webp", "c": "Double Exposures", "t": "Lines Everywhere", "r": 1.27}, {"s": "images/locket-stream.webp", "c": "Double Exposures", "t": "Locket Stream", "r": 0.762}, {"s": "images/motion.webp", "c": "Double Exposures", "t": "Motion", "r": 0.732}, {"s": "images/pathway1.webp", "c": "Double Exposures", "t": "Pathway 1", "r": 1.357}, {"s": "images/pathway2.webp", "c": "Double Exposures", "t": "Pathway 2", "r": 0.8}, {"s": "images/sail.webp", "c": "Double Exposures", "t": "Sail", "r": 1.486}, {"s": "images/see-the-sign.webp", "c": "Double Exposures", "t": "See the Sign", "r": 0.717}, {"s": "images/spillway.webp", "c": "Double Exposures", "t": "Spillway", "r": 0.758}, {"s": "images/uncover.webp", "c": "Double Exposures", "t": "Uncover", "r": 0.762}, {"s": "images/willow.webp", "c": "Double Exposures", "t": "Willow", "r": 1.338}];
-const grid=document.getElementById("grid"),fl=document.getElementById("filters");
-const em=document.getElementById("empty");
-/* EDIT HERE: the headline and sentence shown above the "View portfolio" button for each section */
-const HERO={
- "Real Estate":["Presenting spaces with clarity and character.","Clear, clean photography for agents, developers, and property companies. Get in touch to book a shoot."],
- "Black & White":["Black and white photography of quiet spaces and strange memories.","The pause between where you were and where you’re going, held still."],
- "Double Exposures":["Two places burned into one image.","I'm the middle man between images, using double exposures to merge separate realities into something united. Challenging the viewer to participate in a realm that feels familiar but it's slightly out of view."]
-};
-const hh=document.getElementById("hh"),hp=document.getElementById("hp");
-function setHero(c,instant){const t=HERO[c];if(!t)return;
-  if(instant){hh.textContent=t[0];hp.textContent=t[1];return}
-  hh.classList.add("fade");hp.classList.add("fade");
-  setTimeout(()=>{hh.textContent=t[0];hp.textContent=t[1];hh.classList.remove("fade");hp.classList.remove("fade")},250)}
-const cats=["Real Estate","Black & White","Double Exposures"]; /* EDIT HERE: filter button names */
-let cur="Real Estate",vis=[],idx=0;
-PHOTOS.forEach((p,i)=>{
-  const d=document.createElement("figure");d.className="tile";d.dataset.c=p.c;
-  d.innerHTML='<div class="ph" style="aspect-ratio:'+p.r+'">'+p.t+'</div><img loading="lazy" alt="'+(p.t||p.c)+'" src="'+p.s+'">';
-  d.querySelector("img").onerror=function(){this.style.display="none";this.dataset.bad=1};
-  d.onclick=()=>open(p);
-  grid.appendChild(d);
-});
-cats.forEach(c=>{
-  const b=document.createElement("button");b.textContent=c;if(c===cur)b.className="on";
-  b.onclick=()=>{cur=c;[...fl.children].forEach(x=>x.className=x===b?"on":"");
-    [...grid.children].forEach(t=>t.classList.toggle("hide",t.dataset.c!==c));
-    em.style.display=PHOTOS.some(p=>p.c===c)?"none":"block";
-    setHero(c)};
-  fl.appendChild(b);
-});
-[...grid.children].forEach(t=>t.classList.toggle("hide",t.dataset.c!==cur));
-em.style.display=PHOTOS.some(p=>p.c===cur)?"none":"block";
-setHero(cur,true);
-const lb=document.getElementById("lb"),li=document.getElementById("li"),lc=document.getElementById("lc");
-function list(){return PHOTOS.filter(p=>cur==="All"||p.c===cur)}
-function show(){const p=vis[idx];li.src=p.s;li.alt=p.t||p.c;lc.textContent=p.c==="Real Estate"?(idx+1)+" / "+vis.length:[p.t,p.c,(idx+1)+"/"+vis.length].filter(Boolean).join(" · ")}
-function open(p){vis=list();idx=vis.indexOf(p);show();lb.classList.add("open")}
-function step(n){idx=(idx+n+vis.length)%vis.length;show()}
-document.getElementById("lx").onclick=()=>lb.classList.remove("open");
-document.getElementById("lp").onclick=()=>step(-1);
-document.getElementById("ln").onclick=()=>step(1);
-lb.onclick=e=>{if(e.target===lb)lb.classList.remove("open")};
-addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;
-  if(e.key==="Escape")lb.classList.remove("open");if(e.key==="ArrowLeft")step(-1);if(e.key==="ArrowRight")step(1)});
+const sl=[...document.querySelectorAll(".slide")],dots=document.getElementById("dots");let i=0,t;
+sl.forEach((_,n)=>{const b=document.createElement("button");b.setAttribute("aria-label","Photo "+(n+1));b.onclick=()=>{go(n);restart()};dots.appendChild(b)});
+function go(n){i=(n+sl.length)%sl.length;sl.forEach((s,k)=>s.classList.toggle("on",k===i));[...dots.children].forEach((d,k)=>d.classList.toggle("on",k===i))}
+function restart(){clearInterval(t);if(!matchMedia("(prefers-reduced-motion: reduce)").matches)t=setInterval(()=>go(i+1),5500)}
+document.getElementById("pv").onclick=()=>{go(i-1);restart()};document.getElementById("nx").onclick=()=>{go(i+1);restart()};
+const sh=document.getElementById("show");sh.addEventListener("mouseenter",()=>clearInterval(t));sh.addEventListener("mouseleave",restart);
+let x0=null;sh.addEventListener("touchstart",e=>{x0=e.touches[0].clientX},{passive:true});
+sh.addEventListener("touchend",e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40){go(i+(dx<0?1:-1));restart()}x0=null});
+addEventListener("keydown",e=>{if(e.key==="ArrowLeft"){go(i-1);restart()}if(e.key==="ArrowRight"){go(i+1);restart()}});
+go(0);restart();
 document.getElementById("yr").textContent=new Date().getFullYear();
 </script>
 </body>
