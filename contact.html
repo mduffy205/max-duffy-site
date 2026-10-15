@@ -16,7 +16,8 @@ html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 16px/1.6 Inter,system-ui,sans-serif}
 header{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .logo{font:700 29px "Cormorant Garamond",Georgia,serif;letter-spacing:.03em;color:var(--fg);text-decoration:none}
-@media(max-width:520px){.logo{font-size:24px}nav a{margin-left:14px!important}}
+@media(max-width:520px){.logo{font-size:23px}nav a{margin-left:11px!important;font-size:12px;letter-spacing:.05em}}
+@media(max-width:400px){.logo{font-size:20px;white-space:nowrap}nav a{margin-left:8px!important;font-size:11px;letter-spacing:.03em}header{padding-left:4vw;padding-right:4vw;flex-wrap:wrap;gap:4px 0}}
 nav a{margin-left:22px;font-size:13px;letter-spacing:.12em;color:var(--mute);text-decoration:none}
 nav a:hover{color:var(--fg)}
 .hero{padding:12vh 5vw 8vh;max-width:1100px}
@@ -76,7 +77,7 @@ nav a.cur{color:var(--fg)}
 <body>
 <header>
   <a class="logo" href="index.html">Max Duffy</a>
-  <nav><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html" class="cur">Contact</a></nav>
+  <nav><a href="index.html">Home</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html" class="cur">Contact</a></nav>
 </header>
 <main class="page">
 <h1>Contact</h1>
